@@ -52,10 +52,16 @@ class Danjulf_TinyDomesticator_Block_Adminhtml_Tinyconfig extends Mage_Adminhtml
 
         if ($config->isGuessCssEnabled()) {
             //Trying to guess Css from website settings:
+            $package = $website->getConfig('design/package/name');
+            $package = empty($package) ? 'base' : $package;
+
+            $skin = $website->getConfig('design/theme/skin');
+            $skin = empty($skin) ? 'default' : $skin;
+
             $themeUrl = array(
                 'frontend',
-                $website->getConfig('design/package/name'),
-                $website->getConfig('design/theme/skin'),
+                $package,
+                $skin,
                 'css',
                 'styles.css'
             );
