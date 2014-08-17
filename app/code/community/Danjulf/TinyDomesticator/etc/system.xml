@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Danjulf_TinyDomesticator
+ *
+ * Copyright (C) 2014 Daniel Bergstrom (danjulf@gmail.com)
+ *
+ * This file is part of Danjulf_TinyDomesticator.
+ *
+ * Danjulf_TinyDomesticator is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Danjulf_TinyDomesticator is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Danjulf_TinyDomesticator. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category  Danjulf
+ * @package   Danjulf_TinyDomesticator
+ * @author    Daniel Bergstrom <danjulf@gmail.com>
+ * @copyright 2014 Daniel Bergstrom (danjulf@gmail.com)
+ * @license   http://www.gnu.org/licenses/lgpl.html GNU LGPL
+ */
+-->
+<config>
+    <sections>
+        <cms>
+            <groups>
+                <wysiwyg_stylesheets translate="label" module="tinydomesticator">
+                    <label>WYSIWYG Stylesheets</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <guess_css translate="label, comment" module="tinydomesticator">
+                            <label>Guess Stylesheet</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[Guess stylesheet location({skin-url}/css/styles.css) If this does not apply to your theme, set this to false and supply a custom css-url below]]></comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </guess_css>
+                        <custom_css translate="label" module="tinydomesticator">
+                            <label>Custom CSS URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_css>
+                    </fields>
+                </wysiwyg_stylesheets>
+                <wysiwyg_cleanup_output translate="label" module="tinydomesticator">
+                    <label>WYSIWYG Cleanup/Output</label>
+                    <comment><![CDATA[Do not touch theese settings if you do not know what you are doing, the standard settings are in most cases sufficient]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <schema translate="label, comment" module="tinydomesticator">
+                            <label>Schema</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:schema">Reference</a>]]></comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </schema>
+                        <valid_elements translate="label, comment" module="tinydomesticator">
+                            <label>Valid elements</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:valid_elements">Reference</a>]]></comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </valid_elements>
+                        <extended_valid_elements translate="label, comment" module="tinydomesticator">
+                            <label>Extended Valid Elements</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:extended_valid_elements">Reference</a>]]></comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </extended_valid_elements>
+                        <valid_children translate="label, comment" module="tinydomesticator">
+                            <label>Valid Children</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:valid_children">Reference</a>]]></comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </valid_children>
+                        <force_p_newlines translate="label, comment" module="tinydomesticator">
+                            <label>Force new paragraph on linebreak</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:force_p_newlines">Reference</a>]]></comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </force_p_newlines>
+                        <force_br_newlines translate="label, comment" module="tinydomesticator">
+                            <label>Force break on linebreak</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:force_br_newlines">Reference</a>]]></comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </force_br_newlines>
+                        <forced_root_block translate="label, comment" module="tinydomesticator">
+                            <label>Forced root block</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[<a href="http://www.tinymce.com/wiki.php/Configuration3x:forced_root_block">Reference</a>]]></comment>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </forced_root_block>
+                    </fields>
+                </wysiwyg_cleanup_output>
+            </groups>
+        </cms>
+    </sections>
+</config>

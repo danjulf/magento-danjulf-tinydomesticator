@@ -1,0 +1,4 @@
+app/etc/modules/Danjulf_TinyDomesticator.xml
+app/code/community/Danjulf/TinyDomesticator
+app/design/adminhtml/default/default/layout/tinydomesticator.xml
+app/design/adminhtml/base/default/template/tinydomesticator

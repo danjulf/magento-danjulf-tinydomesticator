@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Danjulf_TinyDomesticator
+ *
+ * Copyright (C) 2014 Daniel Bergstrom (danjulf@gmail.com)
+ *
+ * This file is part of Danjulf_TinyDomesticator.
+ *
+ * Danjulf_TinyDomesticator is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Danjulf_TinyDomesticator is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Danjulf_TinyDomesticator. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category  Danjulf
+ * @package   Danjulf_TinyDomesticator
+ * @author    Daniel Bergstrom <danjulf@gmail.com>
+ * @copyright 2014 Daniel Bergstrom (danjulf@gmail.com)
+ * @license   http://www.gnu.org/licenses/lgpl.html GNU LGPL
+ */
+-->
+<config>
+
+    <modules>
+        <Danjulf_TinyDomesticator>
+            <version>0.1.0</version>
+        </Danjulf_TinyDomesticator>
+    </modules>
+
+    <global>
+        <blocks>
+            <tinydomesticator>
+                <class>Danjulf_TinyDomesticator_Block</class>
+            </tinydomesticator>
+        </blocks>
+        <models>
+            <tinydomesticator>
+                <class>Danjulf_TinyDomesticator_Model</class>
+            </tinydomesticator>
+        </models>
+        <helpers>
+            <tinydomesticator>
+                <class>Danjulf_TinyDomesticator_Helper</class>
+            </tinydomesticator>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <tinydomesticator>
+                    <file>tinydomesticator.xml</file>
+                </tinydomesticator>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <default>
+        <cms>
+            <wysiwyg_cleanup_output>
+                <extended_valid_elements><![CDATA[+div[*],+a[*],+span[*],article[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],aside[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],audio[id|autoplay|controls|loop|preload|src|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],canvas[id|height|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],command[id|checked|disabled|icon|label|radiogroup|type|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],datalist[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],details[id|open|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],embed[id|height|src|type|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],figcaption[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],figure[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],footer[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],header[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],hgroup[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],keygen[id|autofocus|challenge|disabled|form|keytype|name|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],mark[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],meter[id|form|high|low|max|min|optimum|value|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],nav[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],output[id|for|form|name|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],progress[id|max|value|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],rp[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],rt[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],ruby[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],section[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],source[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],summary[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],time[id|datetime|pubdate|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],video[id|audio|autoplay|controls|height|loop|poster|preload|src|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],wbr[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title]]]></extended_valid_elements>
+                <valid_children><![CDATA[+a[*]]]></valid_children>
+                <valid_elements></valid_elements>
+                <force_p_newlines>1</force_p_newlines>
+                <force_br_newlines>0</force_br_newlines>
+                <forced_root_block><![CDATA[p]]></forced_root_block>
+                <schema><![CDATA[html5]]></schema>
+            </wysiwyg_cleanup_output>
+            <wysiwyg_stylesheets>
+                <guess_css>1</guess_css>
+            </wysiwyg_stylesheets>
+        </cms>
+    </default>
+
+</config>
