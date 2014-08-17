@@ -1,4 +1,8 @@
-magento-danjulf-tinydomesticator
-================================
+Danjulf_TinyDomesticator
+========================
+A Magento module intended to tame TinyMCE for Magento.
 
-Magento module for configuring TinyMCE
+Features
+--------
+- By default configures TinyMCE to be slightly less obstructive.
+- Adds stylesheet options along with various cleanup / output options to System -> Configuration -> General -> Content Management
