@@ -36,7 +36,11 @@ class Danjulf_TinyDomesticator_Block_Adminhtml_Tinyconfig extends Mage_Adminhtml
      */
     public function isEnabled()
     {
-        return $this->getLayout()->getBlock('head')->getCanLoadTinyMce();
+        $headBlock = $this->getLayout()->getBlock('head');
+        if ($headBlock instanceof Mage_Core_Block_Abstract) {
+            return $headBlock->getCanLoadTinyMce();
+        }
+        return false;
     }
 
     /**
@@ -65,24 +69,30 @@ class Danjulf_TinyDomesticator_Block_Adminhtml_Tinyconfig extends Mage_Adminhtml
                 'css',
                 'styles.css'
             );
-            $themeUrl = implode('/',$themeUrl);
+            $themeUrl = implode('/', $themeUrl);
             $cssPath = Mage::getBaseUrl('skin') . $themeUrl;
         } else {
             $cssPath = $config->getCustomCss();
         }
 
-        $settings['content_css']                = "'".$cssPath."'";
-        $settings['schema']                     = "'".$config->getSchema()."'";
+        $settings['content_css'] = "'" . $cssPath . "'";
+        $settings['schema'] = "'" . $config->getSchema() . "'";
+
         if ($config->getValidElements()) {
-            $settings['valid_elements']         = "'".$config->getValidElements()."'";
+            $settings['valid_elements'] = "'" . $config->getValidElements() . "'";
         }
-        $settings['extended_valid_elements']    = "'".$config->getExtendedValidElements()."'";
+
+        $settings['extended_valid_elements']
+            = "'" . $config->getExtendedValidElements() . "'";
+
         if ($config->getValidChildren()) {
-            $settings['valid_children']         = "'".$config->getValidChildren()."'";
+            $settings['valid_children'] = "'" . $config->getValidChildren() . "'";
         }
-        $settings['force_p_newlines']           = $config->isForceParagraphNewlinesEnabled() ? 'true' : 'false';
-        $settings['force_br_newlines']          = $config->isForceBreakNewlinesEnabled() ? 'true' : 'false';
-        $settings['forced_root_block']          = "'".$config->getForcedRootBlock()."'";
+
+        $settings['force_p_newlines'] =
+            $config->isForceParagraphNewlinesEnabled() ? 'true' : 'false';
+        $settings['force_br_newlines'] = $config->isForceBreakNewlinesEnabled() ? 'true' : 'false';
+        $settings['forced_root_block'] = "'".$config->getForcedRootBlock()."'";
 
         return $settings;
     }
